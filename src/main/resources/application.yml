@@ -1,0 +1,29 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /cloth-stores
+
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/cloth-stores?createDatabaseIfNotExist=true
+    username: root
+    password: 123456
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+jwt:
+  signerKey: "7hEJSx/CDtQYzX0RZU8vzAWnJMBqJW32r8FH1iWnk82IIigEq9pt0QJzC8iXk/w1l"
+  valid-duration: 604800000
+  refreshable-duration: 2592000000
+
+app:
+  cookie:
+    name: "SESSION"
+    same-site: "Lax"
+    secure: false
+
+file:
+  upload-dir: uploads
